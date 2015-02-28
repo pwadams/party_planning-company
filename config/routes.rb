@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
 
-root 'company#index'
-resources :company do
+root 'companies#index'
+
+resources :companies do
   resources :events
   end
 end

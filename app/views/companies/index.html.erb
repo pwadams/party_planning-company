@@ -1,0 +1,18 @@
+All Companies (company index)
+
+<%= link_to "New Company", new_company_path %>
+<br>
+
+<% @companies.each do |company| %>
+  <%= link_to company.name, company_path(company) %>
+  <br>
+
+  <%= link_to "Delete", company_path(company), method: :delete %>
+
+<% end %>
+<hr>
+All Events
+<% @events.each do |event| %>
+<br>
+  <%= event.name %>
+<% end %>

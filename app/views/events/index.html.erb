@@ -1,0 +1,10 @@
+Events index
+
+<% @company.events.each do |event| %>
+
+  <ul>
+    <li>Company: <%= @company.name %></li>
+    <li>Event: <%= link_to event.name, company_event_path(@company, event)%></li>
+  </ul>
+
+<% end %>
